@@ -2968,3 +2968,7 @@ input:-internal-autofill-selected {
 .alert-info {
   color: #108092;
 }
+
+.purple {
+    color: #6f42c1;
+}

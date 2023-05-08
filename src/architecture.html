@@ -1,396 +1,723 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-<link href="assets/images/favicon.png" rel="icon" />
-<title>Documentation | Porjet UF</title>
-<meta name="description" content="">
-<meta name="author" content="">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="assets/images/favicon.png" rel="icon" />
+    <title>Documentation | Porjet UF</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Stylesheet
+       ============================== -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
 
-<!-- Stylesheet
-============================== -->
-<!-- Bootstrap -->
-<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
-<!-- Font Awesome Icon -->
-<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
-<!-- Magnific Popup -->
-<link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
-<!-- Highlight Syntax -->
-<link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
-<!-- Custom Stylesheet -->
-<link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+    <link
+            rel="stylesheet"
+            href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
+    />
+    <!-- Font Awesome Icon -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/magnific-popup/magnific-popup.min.css" />
+    <!-- Highlight Syntax -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/highlight.js/styles/github.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
 </head>
-
-<body class="box" data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
-
+<body class="box" data-spy="scroll" data-target=".idocs-navigation" data-offset="125" data-target="#toc">
 <!-- Preloader -->
 <div class="preloader">
-  <div class="lds-ellipsis">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
+    <div class="lds-ellipsis">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
 </div>
-<!-- Preloader End --> 
-
-<!-- Document Wrapper   
-=============================== -->
-<div id="main-wrapper"> 
-  
-  <!-- Header
-  ============================ -->
-  <header id="header" class="sticky-top"> 
-    <!-- Navbar -->
-    <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
-      <div class="container-fluid">
-        <!-- Sidebar Toggler -->
-		<button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
-		
-		<!-- Logo --> 
-        <a class="logo ml-md-3" href="architecture.html" title="iDocs Template"> <img src="assets/images/logo-light.png" alt="iDocs Template"/> </a>
-		<span class="text-2 ml-2">v1.0</span> 
-        <!-- Logo End -->
-        
-		<!-- Navbar Toggler -->
-		<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
-        
-		<div id="header-nav" class="collapse navbar-collapse justify-content-end">
-          <ul class="navbar-nav">
-            <li><a target="_blank" href="#" class="active">Documentation d'architecture</a></li>
-            <li><a target="_blank" href="exploitation.html">Documentation d'exploitation</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- Navbar End --> 
-  </header>
-  <!-- Header End --> 
-  
-  <!-- Content
-  ============================ -->
-  <div id="content" role="main">
-    
-	<!-- Sidebar Navigation
-	============================ -->
-      <div class="idocs-navigation bg-dark">
-          <ul class="nav flex-column ">
-              <li class="nav-item"><a class="nav-link active" href="#idocs_1">
-                      1. Introduction</a>
-                  <ul class="nav flex-column">
-                      <li class="nav-item"><a class="nav-link" href="#idocs_1_1">1.1 But et portée de la documentation</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_1_2">1.2 Importance de la documentation dans le cadre d’une petite entreprise</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_1_3">1.3 Aperçu de l'architecture proposée</a></li>
-                  </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_2">2. Infrastructure générale</a>
-                  <ul class="nav flex-column">
-                      <li class="nav-item"><a class="nav-link" href="#idocs_2_1">2.1 Topologie du réseau</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_2_2">2.2 Définition succincte des éléments des réseaux</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_2_3">2.3 Tableaux de filtrage des réseaux</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_2_4">2.4 Services permettant la prise en charge des communications réseaux</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_2_5">2.5 Services permettant de gérer la sécurité des réseaux</a></li>
-                  </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_3">3. Liste des composants applicatifs</a>
-                  <ul class="nav flex-column">
-                      <li class="nav-item"><a class="nav-link" href="#idocs_3_1">3.1 Serveur Web (DMZ)</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_3_2">3.2 Serveur Backup (LAN)</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_3_3">3.3 Mise en œuvre de services pour prendre en charge la communication réseau</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_3_4">3.4 Mise en œuvre de mesures de sécurité</a></li>
-                  </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_4">4. Configuration</a>
-                  <ul class="nav flex-column">
-                      <li class="nav-item"><a class="nav-link" href="#idocs_4_1">4.1 Configuration sur le pare-feu (DHCP, DNS, filtrage réseau, routage etc…)</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_4_2">4.2 Configuration des systèmes d'exploitation et des applications sur les clients</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#idocs_4_3">4.3 Configuration des systèmes d'exploitation et des applications serveur, y compris la sauvegarde et l'hébergement de sites web</a></li>
-                  </ul>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_5">5. Conclusion</a>
-                  <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#idocs_5_1">5.1 Retour sur l’importance de la documentation</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_5_2">5.2 Points clés</a></li>
-              <li class="nav-item"><a class="nav-link" href="#idocs_5_3">5.3 Améliorations</a></li>
-                  </ul>
-              </li>
-          </ul>
-      </div>
-    
-    <!-- Docs Content
-	============================ -->
-    <div class="idocs-content bg-dark">
-      <div class="container">
-        
-        <!-- Intro
-		============================ -->
-        <section id="idocs_1">
-        <h1>UF Infrastructure & Système d’information</h1>
-        <h2>ARCHITECTURE CLIENT-SERVEUR</h2>
-        <p class="lead">Documentation d'architecture</p>
-		<hr>
-		<div class="row">
-			<div class="col-sm-6 col-lg-4">
-				<ul class="list-unstyled">
-					<li><strong>Version:</strong> 1.0</li>
-					<li><strong>Auteur(s):</strong> <a href="" target="_blank">CHIBANE Eva</a>, <a href="" target="_blank">CORBEL Marianne</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-6 col-lg-4">
-				<ul class="list-unstyled">
-					<li><strong class="font-weight-700">Formation :</strong> YNOV Informatique</li>
-                    <li><strong class="font-weight-700">Promotion :</strong>  B1 Info AIX YNOV Campus 2022-2023
-                    </li>
-				</ul>
-			</div>
-            <div class="col-sm-6 col-lg-4">
-                <ul class="list-unstyled">
-                    <li><strong class="font-weight-700">Créée :</strong> 8 mai 2023</li>
-                    <li><strong class="font-weight-700">Mise à jour :</strong> 8 mai 2023</li>
-                </ul>
+<!-- Preloader End -->
+<!-- Document Wrapper
+   =============================== -->
+<div id="main-wrapper">
+    <!-- Header
+       ============================ -->
+    <header id="header" class="sticky-top">
+        <!-- Navbar -->
+        <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+            <div class="container-fluid">
+                <!-- Sidebar Toggler -->
+                <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
+                <!-- Logo -->
+                <a class="logo ml-md-3" href="architecture.html" title="iDocs Template"> <img src="assets/images/logo-light.png" alt="iDocs Template"/> </a>
+                <span class="text-2 ml-2">v1.0</span>
+                <!-- Logo End -->
+                <!-- Navbar Toggler -->
+                <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
+                <div id="header-nav" class="collapse navbar-collapse justify-content-end">
+                    <ul class="navbar-nav">
+                        <li><a target="_blank" href="#" class="active">Documentation d'architecture</a></li>
+                        <li><a target="_blank" href="exploitation.html">Documentation d'exploitation</a></li>
+                    </ul>
+                </div>
             </div>
-		</div>
-        <p class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </section>
-        
-		<hr class="divider">
-		
-        <!-- 1.1 But et portée de la documentation
-		============================ -->
-        <section id="idocs_1_1">
-          <h2>1.1 But et portée de la documentation</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </section>
-        
-		<hr class="divider">
-		
-        <!-- 1.2 Importance de la documentation dans le cadre d’une petite entreprise
-		============================ -->
-        <section id="idocs_1_2">
-          <h2>1.2 Importance de la documentation dans le cadre d’une petite entreprise</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </section>
-        
-		<hr class="divider">
-		        
-		<!-- 1.3 Aperçu de l'architecture proposée
-		============================ -->
-        <section id="idocs_1_3">
-          <h2>1.3 Aperçu de l'architecture proposée</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </section>
+        </nav>
+        <!-- Navbar End -->
+    </header>
+    <!-- Header End -->
+    <!-- Content
+       ============================ -->
+    <div id="content" role="main">
+        <!-- Sidebar Navigation
+           ============================ -->
+        <div class="idocs-navigation bg-dark">
+            <ul class="nav flex-column ">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#idocs_1">
+                        1. Introduction</a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#idocs_1_1">1.1 But et portée de la documentation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_1_2">1.2 Importance de la documentation dans le cadre d’une petite entreprise</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_1_3">1.3 Aperçu de l'architecture proposée</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#idocs_2">2. Infrastructure générale</a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#idocs_2_1">2.1 Topologie du réseau</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_2_2">2.2 Définition succincte des éléments des réseaux</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_2_3">2.3 Tableaux de filtrage des réseaux</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_2_4">2.4 Services permettant la prise en charge des communications réseaux</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_2_5">2.5 Services permettant de gérer la sécurité des réseaux</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#idocs_3">3. Liste des composants applicatifs</a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#idocs_3_1">3.1 pfSense (WAN, LAN, DMZ)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_3_2">3.2 Serveur Web (DMZ)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_3_3">3.3 Serveur Backup (LAN)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_3_4">3.4 Client Windows (LAN)</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_3_5">3.4 Client Linux (LAN)</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#idocs_4">4. Configuration des hôtes</a>
+                    <ul class="nav flex-column">
+                        <li class="nav-item"><a class="nav-link" href="#idocs_4_1">4.1 Serveur pfSense  (WAN, LAN, DMZ) </a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_4_2">4.2 Configuration des systèmes d'exploitation et des applications sur les clients</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#idocs_4_3">4.3 Configuration des systèmes d'exploitation et des applications serveur, y compris la sauvegarde et l'hébergement de sites web</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- Docs Content
+           ============================ -->
+        <div class="idocs-content bg-dark">
+            <div class="container">
+                <section id="before">
+                    <h1>UF Infrastructure & Système d’information</h1>
+                    <h2>ARCHITECTURE CLIENT-SERVEUR</h2>
+                    <p class="lead">Documentation d'architecture</p>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-4">
+                            <ul class="list-unstyled">
+                                <li><strong>Version:</strong> 1.0</li>
+                                <li><strong>Auteur(s):</strong> <a href="" target="_blank">CHIBANE Eva</a>, <a href="" target="_blank">CORBEL Marianne</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <ul class="list-unstyled">
+                                <li><strong class="font-weight-700">Formation :</strong> YNOV Informatique</li>
+                                <li><strong class="font-weight-700">Promotion :</strong>  B1 Info AIX YNOV Campus 2022-2023
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-6 col-lg-4">
+                            <ul class="list-unstyled">
+                                <li><strong class="font-weight-700">Créée :</strong> 8 mai 2023</li>
+                                <li><strong class="font-weight-700">Mise à jour :</strong> 8 mai 2023</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="alert alert-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </section>
+                <!-- Intro
+   ============================ -->
 
-		<hr class="divider">
-		
-		<!-- 2. Infrastructure générale
-		============================ -->
-        <section id="idocs_2">
-          <h2>2. Infrastructure générale</h2>
-          <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </section>
-		
-		
-        <!-- 2.1 Topologie du réseau
-		============================ -->
-        <section id="idocs_2_1">
-          <h2>2.1 Topologie du réseau</h2>
-            <p><a class="popup-img" href="assets/images/topologie.png"><img src="assets/images/topologie.png" class="img-fluid img-thumbnail" alt="image"></a></p>
-          <p>Il est intéressant de noter que dans le cas d’une virtualisation du réseau, les switches ne sont pas « physiquement » présents dans l’infrastructure, puisqu’ils sont internes au logiciel de virtualisation. </p>
-        </section>
-		
-		<hr class="divider">
-		
-		<!-- 2.2 Définition succincte des éléments des réseaux
-		============================ -->
-        <section id="idocs_2_2">
-          <h2>2.2 Définition succincte des éléments des réseaux</h2>
-            <h4>2.2.1 pfSense</h4>
-		  <p class="text-4">Le serveur pfSense sert de colonne vertébrale à l’architecture. Il gère les deux réseaux de l’entreprise (LAN et DMZ) ainsi que leurs relations respectives et avec l’extérieur (Internet).
-              Il a les rôles de routeur, serveur DNS, serveur DHCP, Pare-feu, Proxy inverse et passerelle de sortie pour chacun des deux sous-réseaux qu’il gère.</p>
-            <h4>2.2.2 Réseau dédié au serveur web (DMZ)</h4>
-            <p class="text-4">Ce réseau n’a pour but que l’hébergement du serveur contenant le site web. Par mesure de sécurité, il n’est pas en mesure de communiquer directement avec le réseau interne, ni capable d’accéder à internet. </p>
-        </section>
-		
-		<hr class="divider">
-		
-		<!-- 2.3 Tableaux de filtrage des réseaux
-		============================ -->
-        <section id="idocs_2_3">
-          <h2>2.3 Tableaux de filtrage des réseaux</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		</section>
-
-          <h4>2.3.1 Réseau Interne (LAN)</h4>
-          <table class="table table-bordered">
-              <thead>
-              <tr>
-                  <th scope="col" colspan="4" style="text-align: center">LAN</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                  <th scope="row">Adresse du réseau</th>
-                  <td>10.10.0.0</td>
-              </tr>
-              <tr>
-                  <th scope="row">Masque de sous-réseau</th>
-                  <td>255.255.255.248 (/29)</td>
-              </tr>
-              <tr>
-                  <th scope="row">Nombres d’IP hôtes disponibles</th>
-                  <td>6</td>
-              </tr>
-              <tr>
-                  <th scope="row">1ère adresse attribuable</th>
-                  <td>10.10.0.1</td>
-              </tr>
-              <tr>
-                  <th scope="row">Dernière adresse attribuable</th>
-                  <td>10.10.0.6</td>
-              </tr>
-              <tr>
-                  <th scope="row">Adresse de broadcast</th>
-                  <td>10.10.0.7</td>
-              </tr>
-              </tbody>
-          </table>
-
-		<hr class="divider">
-          <!-- 3.  Liste des composants applicatifs
-          ============================ -->
-          <section id="idocs_3">
-            <h2>3.  Liste des composants applicatifs</h2>
-            </section>
-          <!-- 3.1 Serveur Web (DMZ)
-============================ -->
-          <section id="idocs_3_1">
-              <h2>3.1 Serveur Web (DMZ)</h2>
-          </section>
-          <!-- 3.2 Serveur Backup (LAN)
-============================ -->
-          <section id="idocs_3_2">
-              <h2>3.2 Serveur Backup (LAN)</h2>
-          </section>
-          <!-- 3.3 Mise en œuvre de services pour prendre en charge la communication réseau
-============================ -->
-          <section id="idocs_3_3">
-              <h2>3.3 Mise en œuvre de services pour prendre en charge la communication réseau</h2>
-          </section>
-          <!-- 3. 3.4 Mise en œuvre de mesures de sécurité
-============================ -->
-          <section id="idocs_3_4">
-              <h2>3.4 Mise en œuvre de mesures de sécurité</h2>
-          </section>
-
-
-
-
-          <hr class="divider">
-
-          <!-- 4. Configuration
-          ============================ -->
-        <section id="idocs_4">
-          <h2>4. Configuration</h2>
-          <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </section>
-		  
-		  <!-- 4.1 Configuration sur le pare-feu (DHCP, DNS, filtrage réseau, routage etc…)
-		  ============================ -->
-		  <section id="idocs_4_1">
-            <h2>4.1 Configuration sur le pare-feu (DHCP, DNS, filtrage réseau, routage etc…)</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </section>
-          
-		  <hr class="divider">
-		  
-		  <!-- 4.2 Configuration des systèmes d'exploitation et des applications sur les clients
-		  ============================ -->
-		  <section id="idocs_4_2">
-            <h2>4.2 Configuration des systèmes d'exploitation et des applications sur les clients</h2>
-            <p class="text-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </section>
-          
-		  <hr class="divider">
-		  		  
-          <!-- 4.3 Configuration des systèmes d'exploitation et des applications serveur, y compris la sauvegarde et l'hébergement de sites web
-		  ============================ -->
-		  <section id="idocs_4_3">
-            <h3>4.3 Configuration des systèmes d'exploitation et des applications serveur, y compris la sauvegarde et l'hébergement de sites web</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </section>
-
-		<hr class="divider">
-
-		<!-- 5. Conclusion
-		============================ -->
-		<section id="idocs_5">
-          <h2>5. Conclusion</h2>
-          <p class="text-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </section>
-        
-		<hr class="divider">
-        
-        <!-- 5.1 Retour sur l’importance de la documentation
-		============================ -->
-        <section id="idocs_5_1">
-          <h2>5.1 Retour sur l’importance de la documentation</h2>
-          <h4>Miaou</h4>
-        </section>
-        
-		<hr class="divider">
-		
-		<!-- 5.2 Points clés
-		============================ -->
-        <section id="idocs_5_2">
-          <h2>5.2 Points clés</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </section>
-		
-		<hr class="divider">
-		
-		<!-- 5.3 Améliorations
-		============================ -->
-        <section id="idocs_5_3">
-          <h2>5.3 Améliorations</h2>
-        </section>
-      </div>
+                <section id="idocs_1">
+                    <h2>1. Introduction</h2>
+                </section>
+                <hr class="divider">
+                <!-- 1.1 But et portée de la documentation
+                   ============================ -->
+                <section id="idocs_1_1">
+                    <h2>1.1 But et portée de la documentation</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </section>
+                <hr class="divider">
+                <!-- 1.2 Importance de la documentation dans le cadre d’une petite entreprise
+                   ============================ -->
+                <section id="idocs_1_2">
+                    <h2>1.2 Importance de la documentation dans le cadre d’une petite entreprise</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </section>
+                <hr class="divider">
+                <!-- 1.3 Aperçu de l'architecture proposée
+                   ============================ -->
+                <section id="idocs_1_3">
+                    <h2>1.3 Aperçu de l'architecture proposée</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </section>
+                <hr class="divider">
+                <!-- 2. Infrastructure générale
+                   ============================ -->
+                <section id="idocs_2">
+                    <h2>2. Infrastructure générale</h2>
+                    <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </section>
+                <!-- 2.1 Topologie du réseau
+                   ============================ -->
+                <section id="idocs_2_1">
+                    <h2>2.1 Topologie du réseau</h2>
+                    <p><a class="popup-img" href="assets/images/topologie.png"><img src="assets/images/topologie.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p class="alert alert-info">Il est intéressant de noter que dans le cas d’une virtualisation du réseau, les switches ne sont pas « physiquement » présents dans l’infrastructure, puisqu’ils sont internes au logiciel de virtualisation. </p>
+                </section>
+                <hr class="divider">
+                <!-- 2.2 Définition succincte des éléments des réseaux
+                   ============================ -->
+                <section id="idocs_2_2">
+                    <h2>2.2 Définition succincte des éléments des réseaux</h2>
+                    <h4>2.2.1 pfSense</h4>
+                    <p class="text-4">Le serveur pfSense sert de colonne vertébrale à l’architecture. Il gère les deux réseaux de l’entreprise (LAN et DMZ) ainsi que leurs relations respectives et avec l’extérieur (Internet).
+                        Il a les rôles de routeur, serveur DNS, serveur DHCP, Pare-feu, Proxy inverse et passerelle de sortie pour chacun des deux sous-réseaux qu’il gère.
+                    </p>
+                    <h4>2.2.2 Réseau dédié au serveur web (DMZ)</h4>
+                    <p class="text-4">Ce réseau n’a pour but que l’hébergement du serveur contenant le site web. Par mesure de sécurité, il n’est pas en mesure de communiquer directement avec le réseau interne, ni capable d’accéder à internet. </p>
+                    <h4>2.2.3 Réseau Interne (LAN)</h4>
+                    <p class="text-4">Le LAN constitue le réseau interne de l’entreprise. Il contient les deux PC dits « clients », et le serveur de restauration. Ce serveur a pour but de faire des sauvegardes et d’être en mesure de restaurer les fichiers du site web, situé dans le réseau DMZ.</p>
+                </section>
+                <hr class="divider">
+                <!-- 2.3 Tableaux de filtrage des réseaux
+                   ============================ -->
+                <section id="idocs_2_3">
+                    <h2>2.3 Tableaux de filtrage des réseaux</h2>
+                </section>
+                <h4>2.3.1 Réseau Interne (LAN)</h4>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col" colspan="4" style="text-align: center">LAN(em2)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Adresse du réseau</th>
+                        <td>10.10.0.0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Masque de sous-réseau</th>
+                        <td>255.255.255.248 (/29)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Nombres d’IP hôtes disponibles</th>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1ère adresse attribuable</th>
+                        <td>10.10.0.1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Dernière adresse attribuable</th>
+                        <td>10.10.0.6</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Adresse de broadcast</th>
+                        <td>10.10.0.7</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <h4>2.3.2 Réseau dédié au serveur Web (DMZ)</h4>
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th scope="col" colspan="4" style="text-align: center">DMZ(em1)</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">Adresse du réseau</th>
+                        <td>10.10.0.8 </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Masque de sous-réseau</th>
+                        <td>255.255.255.248 (/29)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Nombres d’IP hôtes disponibles</th>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">1ère adresse attribuable</th>
+                        <td>10.10.0.9</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Dernière adresse attribuable</th>
+                        <td>10.10.0.14</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Adresse de broadcast</th>
+                        <td>10.10.0.15</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <p class="alert alert-info"><span class="font-weight-bold">NOTE :</span>
+                    Le réseau DMZ ne contenant au maximum que deux machines, son réseau peut théoriquement être réduit à 10.10.0.8/30 (au lieu de 29), réduisant le nombre maximum d’IP attribuables à 2.
+                    Cependant, cette configuration n’étant pas supportée de manière universelle (notamment sur le virtualiseur VMWare, pour n’en citer qu’un), un masque de sous-réseau à 29 bits sera préféré ici.
+                </p>
+                <!-- 2.4 Services permettant la prise en charge des communications réseaux
+                   ============================ -->
+                <section id="idocs_2_4">
+                    <h2>2.4 Services permettant la prise en charge des communications réseaux</h2>
+                    <h4>2.4.1 Distribution des addresses IP</h4>
+                    <p class="text-4">Le serveur PFSense agissant en qualité de routeur, il est notamment responsable de la liaison adresses IP – MAC (table ARP) de chacun des deux serveurs.
+                        Si certaines adresses IP doivent être fixes pour conserver la stabilité de l’infrastructure et des bonnes communications, PFSense peut jouer le rôle de serveur DHCP et attribuer dynamiquement les adresses IP restantes (constituant la pool DHCP) à tout nouvel appareil tentant d’accéder au réseau.
+                    </p>
+                    <h5>2.4.1.1 Réseau Interne (LAN)</h5>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col" colspan="4" style="text-align: center">LAN(em2)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">pfSense (statique)<span class="purple">*</span></th>
+                            <td>10.10.0.1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Serveur de restauration (statique)</th>
+                            <td>10.10.0.2</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pool DHCP</th>
+                            <td>10.10.0.3 - 10.10.0.6</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h5>2.4.1.2 Réseau dédié au serveur web (DMZ)</h5>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col" colspan="4" style="text-align: center">DMZ(em1)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">pfSense (statique)<span class="purple">*</span></th>
+                            <td>10.10.0.9</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Serveur web (statique) </th>
+                            <td>10.10.0.10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Pool DHCP potentielle (désactivée)</th>
+                            <td>10.10.0.11 - 10.10.0.14</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <p class="alert alert-info"><span class="font-weight-bold">NOTE :</span>
+                        Les deux adresses notées par un astérisque (<span class="purple font-weight-bold">*</span>) sont réservées automatiquement dès leur attribution au pare-feu pfSense.
+                    </p>
+                    <h4>2.4.2 Serveur DNS</h4>
+                    <p class="text-4">Le serveur PFSense joue également le rôle de serveur DNS (Domain Name System), permettant la liaison entre un nom de domaine « compréhensible » et l’adresse IP lui correspondant.
+                        Ce serveur DNS permet notamment de réaliser des redirections de port (« Port-Forwarding »), qui seront utilisées pour accéder au serveur web depuis le réseau interne (LAN) de l’entreprise, ou le réseau externe (WAN).
+                    </p>
+                </section>
+                <!-- 2.5 Services permettant de gérer la sécurité des réseaux
+                   ============================ -->
+                <section id="idocs_2_5">
+                    <h2>2.5 Services permettant de gérer la sécurité des réseaux</h2>
+                    <h4>2.5.1 Pare-feu</h4>
+                    <p class="text-4">Des règles de pare-feu devront être mises en place par le serveur PFSense pour garantir une base de sécurité suffisante entre les deux sous-réseaux de l’entreprise (LAN et DMZ) et l’extérieur (WAN, donc Internet)  </p>
+                    <p><a class="popup-img" href="assets/images/parefeu.png"><img src="assets/images/parefeu.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <h4>2.5.2 Proxy Inverse</h4>
+                    <p class="text-4">Enfin, en guise de mesure supplémentaire de sécurité autour du serveur web, un proxy inverse (« Reverse-Proxy ») sera mis en place par le serveur PFSense, permettant dans un premier temps de protéger son adresse IP d’origine aux utilisateurs qui le parcourront.
+                        Dans un second temps et si la fréquentation du site le nécessite, le proxy inverse pourra être configuré pour faire de la mise en cache de données (et améliorer la rapidité du site web), ou de l’équilibrage de charge des serveurs à échelle mondiale (« Global Server Load Balancing »), évitant la surcharge du site.
+                    </p>
+                </section>
+                <hr class="divider">
+                <!-- 3. Liste des composants applicatifs
+                   ============================ -->
+                <section id="idocs_3">
+                    <h2>3. Liste des composants applicatifs</h2>
+                </section>
+                <!-- 3.1 pfSense (WAN, LAN, DMZ)
+                   ============================ -->
+                <section id="idocs_3_1">
+                    <h2>3.1 pfSense (WAN, LAN, DMZ)</h2>
+                    <h4>3.1.1 Composants matériels</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">COMPOSANT</th>
+                            <th scope="col">SPECIFICATIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Processeur</th>
+                            <td>2,5Ghz</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mémoire vive (RAM)</th>
+                            <td>4go</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Disque dur</th>
+                            <td>16go</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">NIC</th>
+                            <td>3 cartes réseau Ethernet (WAN, LAN et DMZ)</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h4>3.1.2 Composants logiciels</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">COMPOSANT</th>
+                            <th scope="col">SPECIFICATIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Squid</th>
+                            <td>0.4.45_9</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- 3.2 Serveur Web (DMZ)
+                   ============================ -->
+                <section id="idocs_3_2">
+                    <p class="alert alert-info">Un accès super-utilisateur doit être possible pour lancer les scripts de remplacement des fichiers.
+                    </p>
+                    <h2>3.2 Serveur Web (DMZ)</h2>
+                    <h4>3.2.1 Composants matériels</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">COMPOSANT</th>
+                            <th scope="col">SPECIFICATIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Processeur</th>
+                            <td>2Ghz</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mémoire vive (RAM)</th>
+                            <td>4go</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Disque dur</th>
+                            <td>40go</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">NIC</th>
+                            <td>1 carte réseau Ethernet branchée au switch DMZ</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h4>3.2.2 Composants logiciels</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">COMPOSANT</th>
+                            <th scope="col">SPECIFICATIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Système d’exploitation</th>
+                            <td>Debian 11</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Environnement de bureau (GUI)</th>
+                            <td>Optionnel (demandera davantage de ressources)</td>
+                        </tr>
+                        <thead>
+                        <tr>
+                            <th scope="col" colspan="2" style="text-align: center"></th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <th scope="row">Apache2</th>
+                            <td>2.5.56</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">PHP</th>
+                            <td>7.4.33</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">rsync</th>
+                            <td>3.2.3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">SSH</th>
+                            <td>OpenSSH_8.4p1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- 3.3 Serveur Backup (LAN)
+                   ============================ -->
+                <section id="idocs_3_3">
+                    <h2>3.3 Serveur Backup (LAN)</h2>
+                    <p class="alert alert-info">Un accès super-utilisateur doit être possible pour lancer les scripts de remplacement des fichiers.
+                    </p>
+                    <h4>3.3.1 Composants matériels</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">COMPOSANT</th>
+                            <th scope="col">SPECIFICATIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Processeur</th>
+                            <td>2Ghz</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mémoire vive (RAM)</th>
+                            <td>4go</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Disque dur</th>
+                            <td>100go</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">NIC</th>
+                            <td>1 carte réseau Ethernet branchée au switch LAN</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h4>3.3.2 Composants logiciels</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">COMPOSANT</th>
+                            <th scope="col">SPECIFICATIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Système d’exploitation</th>
+                            <td>Debian 11</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Environnement de bureau (GUI)</th>
+                            <td>Optionnel (demandera davantage de ressources)</td>
+                        </tr>
+                        <thead>
+                        <tr>
+                            <th scope="col" colspan="2" style="text-align: center"></th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <th scope="row">rsync</th>
+                            <td>3/2/3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">SSH</th>
+                            <td>OpenSSH_8.4p1</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">SSHPass</th>
+                            <td>1.09</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- 3.4 Client Windows (LAN)
+                   ============================ -->
+                <section id="idocs_3_4">
+                    <h2>3.4 Client Windows (LAN)</h2>
+                    <h4>3.4.1 Composants matériels</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">COMPOSANT</th>
+                            <th scope="col">SPECIFICATIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Processeur</th>
+                            <td>2Ghz</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mémoire vive (RAM)</th>
+                            <td>4go</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Disque dur</th>
+                            <td>60go</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">NIC</th>
+                            <td>1 carte réseau Ethernet branchée au switch LAN</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h4>3.4.2 Composants logiciels</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">COMPOSANT</th>
+                            <th scope="col">SPECIFICATIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Système d’exploitation</th>
+                            <td>Windows 10 ou 11</td>
+                        </tr>
+                        <thead>
+                        <tr>
+                            <th scope="col" colspan="2" style="text-align: center"></th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <th scope="row">OpenSSH</th>
+                            <td>Dernière version</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <!-- 3.5 Client Windows (LAN)
+                   ============================ -->
+                <section id="idocs_3_5">
+                    <h2>3.5 Client Linux (LAN)</h2>
+                    <h4>3.5.1 Composants matériels</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">COMPOSANT</th>
+                            <th scope="col">SPECIFICATIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Processeur</th>
+                            <td>2Ghz</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Mémoire vive (RAM)</th>
+                            <td>4go</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Disque dur</th>
+                            <td>60go</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">NIC</th>
+                            <td>1 carte réseau Ethernet branchée au switch LAN</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <h4>3.5.2 Composants logiciels</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th scope="col">COMPOSANT</th>
+                            <th scope="col">SPECIFICATIONS</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">Système d’exploitation</th>
+                            <td>Debian 11</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Environnement de bureau (GUI)</th>
+                            <td>Gnome Desktop 3.38 </td>
+                        </tr>
+                        <thead>
+                        <tr>
+                            <th scope="col" colspan="2" style="text-align: center"></th>
+                        </tr>
+                        </thead>
+                        <tr>
+                            <th scope="row">SSH</th>
+                            <td>OpenSSH_8.4p1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <hr class="divider">
+                <!-- 4. Configuration des hôtes
+                   ============================ -->
+                <section id="idocs_4">
+                    <h2>4. Configuration des hôtes</h2>
+                </section>
+                <!-- 4.1 Serveur pfSense  (WAN, LAN, DMZ)
+                   ============================ -->
+                <section id="idocs_4_1">
+                    <h2>4.1 Serveur pfSense  (WAN, LAN, DMZ) </h2>
+                    <h4>4.1.1 Configuration des interfaces</h4>
+                </section>
+                <hr class="divider">
+                <!-- 4.2 Configuration des systèmes d'exploitation et des applications sur les clients
+                   ============================ -->
+                <section id="idocs_4_2">
+                    <h2>4.2 Configuration des systèmes d'exploitation et des applications sur les clients</h2>
+                    <p class="text-4"></p>
+                </section>
+                <hr class="divider">
+                <!-- 4.3 Configuration des systèmes d'exploitation et des applications serveur, y compris la sauvegarde et l'hébergement de sites web
+                   ============================ -->
+                <section id="idocs_4_3">
+                    <h3>4.3 Configuration des systèmes d'exploitation et des applications serveur, y compris la sauvegarde et l'hébergement de sites web</h3>
+                </section>
+            </div>
+        </div>
     </div>
-	
-  </div>
-  <!-- Content end --> 
-  
-  <!-- Footer
-  ============================ -->
-  <footer id="footer" class="section bg-dark footer-text-light">
-    <div class="container">
-      <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
-        <li><a data-toggle="tooltip" href="" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
-          <li><a data-toggle="tooltip" href="" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
-      </ul>
-      <p class="text-center">Copyright &copy; 2020 <a href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights Reserved.</p>
-	  <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
-    </div>
-  </footer>
-  <!-- Footer end -->
-  
+    <!-- Content end -->
+    <!-- Footer
+       ============================ -->
+    <footer id="footer" class="section bg-dark footer-text-light">
+        <div class="container">
+            <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+                <li><a data-toggle="tooltip" href="" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+                <li><a data-toggle="tooltip" href="" target="_blank" title="" data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+            </ul>
+            <p class="text-center">Copyright &copy; 2020 <a href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights Reserved.</p>
+            <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+        </div>
+    </footer>
+    <!-- Footer end -->
 </div>
-<!-- Document Wrapper end --> 
-
-<!-- Back To Top --> 
-<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
-
+<!-- Document Wrapper end -->
+<!-- Back To Top -->
+<a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
 <!-- JavaScript
-============================ -->
-<script src="assets/vendor/jquery/jquery.min.js"></script> 
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+   ============================ -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
 <!-- Highlight JS -->
-<script src="assets/vendor/highlight.js/highlight.min.js"></script> 
-<!-- Easing --> 
-<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
-<!-- Magnific Popup --> 
-<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script> 
+<script src="assets/vendor/highlight.js/highlight.min.js"></script>
+<!-- Easing -->
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<!-- Magnific Popup -->
+<script src="assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 <!-- Custom Script -->
 <script src="assets/js/theme.js"></script>
 </body>
