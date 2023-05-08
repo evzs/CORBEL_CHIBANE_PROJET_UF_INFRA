@@ -675,7 +675,7 @@ hr {
 }
 .idocs-navigation .nav .nav {
   display: none;
-  border-left: 1px solid regba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
 }
 .idocs-navigation .nav .nav .nav-item .nav-link:after {
   content: "";
