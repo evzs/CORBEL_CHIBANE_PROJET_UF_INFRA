@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,6 @@
        ============================== -->
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
-
     <link
             rel="stylesheet"
             href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
@@ -26,7 +25,7 @@
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
 </head>
-<body class="box" data-spy="scroll" data-target=".idocs-navigation" data-offset="125" data-target="#toc">
+<body class="box" data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
 <!-- Preloader -->
 <div class="preloader">
     <div class="lds-ellipsis">
@@ -49,8 +48,7 @@
                 <!-- Sidebar Toggler -->
                 <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
                 <!-- Logo -->
-                <a class="logo ml-md-3" title="iDocs Template"> <img src="assets/images/logo-light.png" alt="iDocs Template"/> </a>
-                <span class="text-2 ml-2">v1.0</span>
+                <a class="logo ml-md-3" title="iDocs Template"> <img src="assets/images/logo.svg" style="height: 64px; padding: 8px" alt="iDocs Template"/> </a>
                 <!-- Logo End -->
                 <!-- Navbar Toggler -->
                 <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#header-nav"><span></span><span></span><span></span></button>
@@ -140,21 +138,19 @@
                                 <li><strong class="font-weight-700">Mise à jour :</strong> 8 mai 2023</li>
                             </ul>
                         </div>
-                    </div></section>
+                    </div>
+                </section>
                 <br><br>
                 <!-- Intro
-   ============================ -->
-
+                   ============================ -->
                 <section id="idocs_1">
                     <h1>1. Introduction</h1>
                 </section>
-
                 <!-- 1.1 Objet
                    ============================ -->
                 <section id="idocs_1_1">
                     <h2>1.1 Objet</h2>
                     <p class="text-4">Ce projet a pour but d'évaluer les compétences acquises dans le cadre des modules de l'UF "Infrastructure & Système d'information". En groupe de 2, il fallait realiser un projet visant à mettre en place un SI pour une petite entreprise.</p>
-                        
                     <p class="text-4">Le projet devait proposer une architecture comprenant un pare-feu avec des fonctionnalités telles que DHCP, DNS, filtrage réseau, routage, ainsi que deux clients (un Windows et un Linux) et deux serveurs Linux (un pour la sauvegarde du site web et un autre pour l'hébergement du site web).</p>
                 </section>
                 <br><br>
@@ -341,15 +337,14 @@
                    ============================ -->
                 <p id="idocs_2_5">
                     <br><br>
-                    <h2>2.5 Services permettant de gérer la sécurité des réseaux</h2>
-                    <h4>2.5.1 Pare-feu</h4>
-                    <p class="text-4">Des règles de pare-feu devront être mises en place par le serveur pfSense pour garantir une base de sécurité suffisante entre les deux sous-réseaux de l’entreprise (LAN et DMZ) et l’extérieur (WAN, donc Internet)  </p>
-                    <p><a class="popup-img" href="assets/images/parefeu.png"><img src="assets/images/parefeu.png" class="img-fluid img-thumbnail" alt="image"></a></p>
-                    <h4>2.5.2 Proxy Inverse</h4>
-                    <p class="text-4">Enfin, en guise de mesure supplémentaire de sécurité autour du serveur web, un proxy inverse (« Reverse-Proxy ») sera mis en place par le serveur pfSense, permettant dans un premier temps de protéger son adresse IP d’origine aux utilisateurs qui le parcourront.</p>
-                    <p class="text-4">Dans un second temps et si la fréquentation du site le nécessite, le proxy inverse pourra être configuré pour faire de la mise en cache de données (et améliorer la rapidité du site web), ou de l’équilibrage de charge des serveurs à échelle mondiale (« Global Server Load Balancing »), évitant la surcharge du site.</p>
-                    </p>
-                </section>
+                <h2>2.5 Services permettant de gérer la sécurité des réseaux</h2>
+                <h4>2.5.1 Pare-feu</h4>
+                <p class="text-4">Des règles de pare-feu devront être mises en place par le serveur pfSense pour garantir une base de sécurité suffisante entre les deux sous-réseaux de l’entreprise (LAN et DMZ) et l’extérieur (WAN, donc Internet)  </p>
+                <p><a class="popup-img" href="assets/images/parefeu.png"><img src="assets/images/parefeu.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                <h4>2.5.2 Proxy Inverse</h4>
+                <p class="text-4">Enfin, en guise de mesure supplémentaire de sécurité autour du serveur web, un proxy inverse (« Reverse-Proxy ») sera mis en place par le serveur pfSense, permettant dans un premier temps de protéger son adresse IP d’origine aux utilisateurs qui le parcourront.</p>
+                <p class="text-4">Dans un second temps et si la fréquentation du site le nécessite, le proxy inverse pourra être configuré pour faire de la mise en cache de données (et améliorer la rapidité du site web), ou de l’équilibrage de charge des serveurs à échelle mondiale (« Global Server Load Balancing »), évitant la surcharge du site.</p>
+                </p>
                 <hr class="divider">
                 <!-- 3. Liste des composants applicatifs
                    ============================ -->
@@ -669,13 +664,12 @@
                 <section id="idocs_4">
                     <h1>4. Configuration des hôtes</h1>
                 </section>
-                <!-- 4.1 Serveur pfSense 
+                <!-- 4.1 Serveur pfSense
                    ============================ -->
                 <section id="idocs_4_1">
                     <h2>4.1 Serveur pfSense  </h2>
                     <h4>4.1.1 Configuration des interfaces</h4>
                     <p class="text-4">Une fois le système installé, il faut assigner chaque interface au bon NIC et leur attribuer une IP.
-
                         L’IP du WAN étant souvent attribuée par DHCP, sa valeur sera nécessairement différente de celle ci-dessous. Cependant, les adresses IP LAN et DMZ doivent être celles renseignées dans ce document.
                     </p>
                     <table class="table table-bordered">
@@ -698,8 +692,8 @@
                     <p><a class="popup-img" href="assets/images/1.png"><img src="assets/images/1.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="text-4">Tant que le port par défaut du configurateur web est inchangé, il sera accessible sur le port 443 (HTTPS) de l’IP pfSense correspondant au réseau qui contient la machine.
                     </p>
-                        <p class="alert alert-info"> <span class="font-weight-bold">NOTE :</span> Tant que les règles de pare-feu sont inchangées, il peut être nécessaire de réaliser la commande `pfctl -d` dans le shell pour désactiver temporairement le pare-feu. </p>
-                        <br>
+                    <p class="alert alert-info"> <span class="font-weight-bold">NOTE :</span> Tant que les règles de pare-feu sont inchangées, il peut être nécessaire de réaliser la commande `pfctl -d` dans le shell pour désactiver temporairement le pare-feu. </p>
+                    <br>
                     <h4>4.1.2 Serveur DNS</h4>
                     <p class="text-4">Le serveur DNS s’active dans `Services > DNS Resolver > General Settings`. Par défaut, il sera fonctionnel et actif sur les deux sous-réseaux.</p>
                     <p><a class="popup-img" href="assets/images/2.png"><img src="assets/images/2.png" class="img-fluid img-thumbnail" alt="image"></a></p>
@@ -709,8 +703,8 @@
                     <h4>4.1.3 IP Statiques et serveur DHCP</h4>
                     <h5>4.1.3.1 Serveur interne (LAN)</h5>
                     <p class="text-4">Le serveur DHCP doit être actif sur l’interface LAN dans `Services > DHCP Server > LAN`, avec la range correspondante (voir partie 2.4.1.1).
-
-                        Le serveur DNS et la passerelle doivent être l’adresse du pfSense dans le LAN, soit 10.10.0.1. </p>
+                        Le serveur DNS et la passerelle doivent être l’adresse du pfSense dans le LAN, soit 10.10.0.1.
+                    </p>
                     <p><a class="popup-img" href="assets/images/image4.png"><img src="assets/images/image4.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p><a class="popup-img" href="assets/images/image5.png"><img src="assets/images/image5.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p><a class="popup-img" href="assets/images/image6.png"><img src="assets/images/image6.png" class="img-fluid img-thumbnail" alt="image"></a></p>
@@ -724,28 +718,29 @@
                     <p><a class="popup-img" href="assets/images/image9.png"><img src="assets/images/image9.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <br>
                     <h4>4.1.4 Règles de pare-feu</h4>
-<p class="text-4">Les flux entre les trois réseaux doivent se présenter de cette manière : </p>
+                    <p class="text-4">Les flux entre les trois réseaux doivent se présenter de cette manière : </p>
                     <p><a class="popup-img" href="assets/images/image10.png"><img src="assets/images/image10.png" class="img-fluid img-thumbnail" alt="image"></a></p>
-<p class="text-4">Pour résumer simplement, le LAN doit avoir accès au WAN et au DMZ, tandis que le DMZ ne doit avoir aucun accès aux deux autres réseaux (sécurité supplémentaire en cas d’attaque sur la partie accessible à l’extérieur de l’infrastructure, le serveur web).
-
-    Il faut configurer les règles dans `Firewall > Rules`.</p>
-<br>
+                    <p class="text-4">Pour résumer simplement, le LAN doit avoir accès au WAN et au DMZ, tandis que le DMZ ne doit avoir aucun accès aux deux autres réseaux (sécurité supplémentaire en cas d’attaque sur la partie accessible à l’extérieur de l’infrastructure, le serveur web).
+                        Il faut configurer les règles dans `Firewall > Rules`.
+                    </p>
+                    <br>
                     <h5>4.1.4.1 Réseau externe (WAN)</h5>
                     <p><a class="popup-img" href="assets/images/image11.png"><img src="assets/images/image11.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">
                         <span class="font-weight-bold">NOTE :</span> Pour l’instant, le port par défaut utilisé par le GUI est toujours le port HTTPS. Comme il est visible sur le diagramme au-dessus, ce port sera changé par la suite.
                     </p>
-
-<br>
+                    <br>
                     <h5>4.1.4.2 Réseau interne (LAN) </h5>
                     <p><a class="popup-img" href="assets/images/image12.png"><img src="assets/images/image12.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">
-                        <span class="font-weight-bold">NOTE :</span> Par défaut, l’anti-lockout rule concerne les ports 443 et 80. Elle ne doit être changée que plus tard, une fois que le port par défaut de l’interface graphique sera modifié.   </p>
+                        <span class="font-weight-bold">NOTE :</span> Par défaut, l’anti-lockout rule concerne les ports 443 et 80. Elle ne doit être changée que plus tard, une fois que le port par défaut de l’interface graphique sera modifié.
+                    </p>
                     <br>
                     <h5>4.1.4.3 Réseau dédié au site web (DMZ)</h5>
                     <p><a class="popup-img" href="assets/images/image13.png"><img src="assets/images/image13.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">
-                        <span class="font-weight-bold">NOTE :</span> La destination RFC1918 est un alias regroupant tous les réseaux du RFC1918. Les aliases peuvent être configurés dans `Firewall > Aliases`. </p>
+                        <span class="font-weight-bold">NOTE :</span> La destination RFC1918 est un alias regroupant tous les réseaux du RFC1918. Les aliases peuvent être configurés dans `Firewall > Aliases`.
+                    </p>
                     <br>
                     <h4>4.1.5 Port-Forwarding (accès au site web depuis le LAN et le WAN)</h4>
                     <p class="text-4">Cette étape doit être réalisée après la mise en place du serveur web. Celui-ci doit déjà être en fonctionnement sur le port 80 de la machine, qui doit pouvoir y accéder par son http://localhost ou http://10.10.0.10. </p>
@@ -753,8 +748,7 @@
                     <p><a class="popup-img" href="assets/images/image14.png"><img src="assets/images/image14.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="text-4">Cette règle se met en place dans `Firewall > NAT > Port Forwarding`: </p>
                     <p><a class="popup-img" href="assets/images/image15.png"><img src="assets/images/image15.png" class="img-fluid img-thumbnail" alt="image"></a></p>
-<p class="text-4">Désormais, le site doit être accessible sur le port 80 de l’adresse IP du pfSense (WAN) dans le WAN, et l’adresse IP du pfSense (LAN, 10.10.0.1:80) dans le LAN.  </p>
-
+                    <p class="text-4">Désormais, le site doit être accessible sur le port 80 de l’adresse IP du pfSense (WAN) dans le WAN, et l’adresse IP du pfSense (LAN, 10.10.0.1:80) dans le LAN.  </p>
                 </section>
                 <br><br>
                 <!-- 4.2 Configuration des systèmes d'exploitation et des applications sur les clients
@@ -801,18 +795,18 @@
                     <p><a class="popup-img" href="assets/images/image16.png"><img src="assets/images/image16.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p><a class="popup-img" href="assets/images/image17.png"><img src="assets/images/image17.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert-info alert">
-                        <span class="font-weight-bold">NOTE :</span> Le fichier restore.sh demande en argument le nom de l’archive à utiliser pour la restauration.</p>
-                                    <div class="row">
-                                        <div class="col-lg-12">
-                                            <div class="accordion accordion-alterate arrow-right" id="popularTopics">
-                                                <div class="card">
-                                                    <div class="card-header" id="heading1">
-                                                        <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse1"
-                                                                aria-expanded="false" aria-controls="collapse1">Web server - restore.sh</a> </h5>
-                                                    </div>
-                                                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#popularTopics">
-                                                        <div class="card-body">
-                                                            <pre><code class="bash">#!/bin/bash
+                        <span class="font-weight-bold">NOTE :</span> Le fichier restore.sh demande en argument le nom de l’archive à utiliser pour la restauration.
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="accordion accordion-alterate arrow-right" id="popularTopics">
+                                <div class="card">
+                                    <div class="card-header" id="heading1">
+                                        <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse1" aria-expanded="false" aria-controls="collapse1">Web server - restore.sh</a> </h5>
+                                    </div>
+                                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#popularTopics">
+                                        <div class="card-body">
+                                       <pre><code class="bash">#!/bin/bash
 # Checks arguments
 if [ $# -lt 1 ]; then
 echo 1>&2 "ERREUR: Argument manquant (nom du fichier à utiliser, situé dans le dossier ../temp)"
@@ -835,12 +829,12 @@ tar xfz /home/web-server/web_backups/temp/$filename -C /var/www/temp/ # Uncompre
 mv /var/www/temp/backup/* /var/www/html/ # Moves the uncompressed files from the backup folder to the html folder
 rm -rf /var/www/html/temp /home/web-server/web_backups/temp/* # Removes the temp folders
                                                         </code></pre>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <br><br>
                 <!-- 4.3 Configuration des systèmes d'exploitation et des applications serveur, y compris la sauvegarde et l'hébergement de sites web
@@ -879,21 +873,21 @@ rm -rf /var/www/html/temp /home/web-server/web_backups/temp/* # Removes the temp
                     <br>
                     <h4>4.3.2 Mise en place des fichiers de sauvegarde et de restauration</h4>
                     <p class="alert-info alert">
-                        <span class="font-weight-bold">NOTE :</span> Il convient de se connecter au moins une fois manuellement par SSH au serveur web avant d’exécuter l’un des scripts.</p>
-                   <p class="text-4">Les dossiers suivants et leurs permissions doivent être mis en place en sudo: </p>
+                        <span class="font-weight-bold">NOTE :</span> Il convient de se connecter au moins une fois manuellement par SSH au serveur web avant d’exécuter l’un des scripts.
+                    </p>
+                    <p class="text-4">Les dossiers suivants et leurs permissions doivent être mis en place en sudo: </p>
                     <p><a class="popup-img" href="assets/images/image18.png"><img src="assets/images/image18.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <br>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="accordion accordion-alterate arrow-right" id="popularTopics">
                                 <div class="card">
-                                    <div class="card-header" id="heading1">
-                                        <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse1"
-                                                aria-expanded="false" aria-controls="collapse1">Backup Server - backup.sh</a> </h5>
+                                    <div class="card-header" id="heading2">
+                                        <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">Backup Server - backup.sh</a> </h5>
                                     </div>
-                                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#popularTopics">
+                                    <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#popularTopics">
                                         <div class="card-body">
-                                            <pre><code class="bash">#!/bin/bash
+                                       <pre><code class="bash">#!/bin/bash
 echo "RETRIEVING DATA FROM WEB SERVER... (10.10.0.10)"
 sshpass -p "root" rsync -az -e ssh web-server@10.10.0.10:/var/www/html/ /home/backup-server/web_backups/backup/
 if [ "$?" -eq "0" ]
@@ -903,7 +897,7 @@ then
     mv /home/backup-server/web_backups/backup-$(date +"%y-%m-%d_%H-%M-%S").tar.gz /home/backup-server/web_backups/backups/backup-$(date +"%y-%m-%d_%H-%M-%S").tar.gz
     rm -rf /home/backup-server/web_backups/backup-$(date +"%y-%m-%d_%H-%M-%S").tar.gz
     echo "Successfully created backup data."
-else 
+else
     echo "ERROR: Something went wrong when trying to communicate with the web server."
 fi
 
@@ -912,20 +906,13 @@ rm -rf ./backup/
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="accordion accordion-alterate arrow-right" id="popularTopics">
                                 <div class="card">
-                                    <div class="card-header" id="heading1">
-                                        <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse1"
-                                                aria-expanded="false" aria-controls="collapse1">Backup Server - restore.sh</a> </h5>
+                                    <div class="card-header" id="heading3">
+                                        <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">Backup Server - restore.sh</a> </h5>
                                     </div>
-                                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#popularTopics">
+                                    <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#popularTopics">
                                         <div class="card-body">
-                                            <pre><code class="bash">#!/bin/bash
+                                       <pre><code class="bash">#!/bin/bash
 # Retrieves the list of all the files in the backups folder.
 files=($(find ../backups/ -mtime -8 -type f -exec basename {} \;))
 
@@ -980,27 +967,20 @@ then
    exit 1
    fi
    echo "Successfully replaced data."
-else 
+else
    echo "ERROR: Error when trying to communicate with the server."
 fi
                                                             </code></pre>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="accordion accordion-alterate arrow-right" id="popularTopics">
                                 <div class="card">
-                                    <div class="card-header" id="heading1">
-                                        <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse1"
-                                                aria-expanded="false" aria-controls="collapse1">Backup Server - remove.sh</a> </h5>
+                                    <div class="card-header" id="heading4">
+                                        <h5 class="mb-0"> <a href="#" class="collapsed" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">Backup Server - remove.sh</a> </h5>
                                     </div>
-                                    <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#popularTopics">
+                                    <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#popularTopics">
                                         <div class="card-body">
-                                            <pre><code class="bash">#!/bin/bash
+                                       <pre><code class="bash">#!/bin/bash
 if [ -d "/home/backup-server/web_backups/backups" ]
 then
     find /home/backup-server/web_backups/backups/*.tar.gz -mtime +30 -type f -delete
@@ -1021,34 +1001,30 @@ fi
                     <h4>4.3.3 Mise en œuvre des tâches dédiées</h4>
                     <p class="text-4">Il faut modifier le fichier de configuration de crontab (un planificateur de tâches intégré à debian) pour rendre la sauvegarde et la suppression quotidiennes(avec `sudo crontab -e`): </p>
                     <p><a class="popup-img" href="assets/images/image19.png"><img src="assets/images/image19.png" class="img-fluid img-thumbnail" alt="image"></a></p>
-               <p class="alert alert-info">Ici, les deux scripts se lanceront tous les jours à 18h30.</p>
+                    <p class="alert alert-info">Ici, les deux scripts se lanceront tous les jours à 18h30.</p>
                 </section>
                 <br><br>
                 <section id="idocs_4_4">
                     <h2>4.4 Clients Windows et Linux (LAN)</h2>
-
                 </section>
-
-                </div>
-
             </div>
         </div>
     </div>
-    <!-- Content end -->
-    <!-- Footer
-       ============================ -->
-    <footer id="footer" class="section bg-dark footer-text-light">
-        <div class="container">
-            <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
-                <li><a data-toggle="tooltip" href="https://github.com/evzs/CORBEL_CHIBANE_PROJET_UF_INFRA" target="_blank" title=""
-                        data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
-            </ul>
-            <p class="text-center">Copyright &copy; 2020 <a href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights Reserved.</p>
-            <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
-        </div>
-    </footer>
-    <!-- Footer end -->
 </div>
+<!-- Content end -->
+<!-- Footer
+   ============================ -->
+<footer id="footer" class="section bg-dark footer-text-light">
+    <div class="container">
+        <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+            <li><a data-toggle="tooltip" href="https://github.com/evzs/CORBEL_CHIBANE_PROJET_UF_INFRA" target="_blank" title=""
+                   data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+        </ul>
+        <p class="text-center">Copyright &copy; 2020 <a href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iDocs</a>. All Rights Reserved.</p>
+        <p class="text-2 text-center mb-0">Design &amp; Develop by <a class="btn-link" target="_blank" href="http://www.harnishdesign.net/">HarnishDesign</a>.</p>
+    </div>
+</footer>
+<!-- Footer end -->
 <!-- Document Wrapper end -->
 <!-- Back To Top -->
 <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a>
