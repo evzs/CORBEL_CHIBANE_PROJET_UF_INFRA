@@ -701,17 +701,17 @@
                     <p class="text-4">Le serveur DHCP doit être actif sur l’interface LAN dans `Services > DHCP Server > LAN`, avec la range correspondante (voir partie 2.4.1.1).
                         Le serveur DNS et la passerelle doivent être l’adresse du pfSense dans le LAN, soit 10.10.0.1.
                     </p>
-                    <p><a class="popup-img" href="assets/images/image4.png"><img src="assets/images/image4.png" class="img-fluid img-thumbnail" alt="image"></a></p>
-                    <p><a class="popup-img" href="assets/images/image5.png"><img src="assets/images/image5.png" class="img-fluid img-thumbnail" alt="image"></a></p>
-                    <p><a class="popup-img" href="assets/images/image6.png"><img src="assets/images/image6.png" class="img-fluid img-thumbnail" alt="image"></a></p>
-                    <p><a class="popup-img" href="assets/images/image7.png"><img src="assets/images/image7.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image4.png"><img src="assets/images/Image4.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image5.png"><img src="assets/images/Image5.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image6.png"><img src="assets/images/Image6.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image7.png"><img src="assets/images/Image7.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="text-4">Enfin, il faut ajouter la machine du serveur web aux IP statiques du DHCP pour la lui réserver.</p>
-                    <p><a class="popup-img" href="assets/images/image8.png"><img src="assets/images/image8.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image8.png"><img src="assets/images/Image8.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <br>
                     <h5>4.1.3.2 Serveur dédié au site web (DMZ)</h5>
                     <p class="text-4">Par défaut, le réseau DMZ n’a pas vocation à distribuer des adresses IP par DHCP. Si toutefois cette option était envisagée, il est possible de reproduire la même configuration que pour le LAN, avec les valeurs du DMZ (DNS/Passerelle à 10.10.0.9 et Range suivante celle décrite dans le tableau de 2.4.1.2). </p>
                     <p class="text-4">L’adresse IP du serveur de backup devant lui être réservée, il faut également l’ajouter aux IP statiques de l’interface DMZ, toujours dans la partie DHCP Server : </p>
-                    <p><a class="popup-img" href="assets/images/image9.png"><img src="assets/images/image9.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image9.png"><img src="assets/images/Image9.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <br>
                     <h4>4.1.4 Règles de pare-feu</h4>
                     <p class="text-4">Les flux entre les trois réseaux doivent se présenter de cette manière : </p>
@@ -721,16 +721,16 @@
                     </p>
                     <br>
                     <h5>4.1.4.1 Réseau externe (WAN)</h5>
-                    <p><a class="popup-img" href="assets/images/image11.png"><img src="assets/images/image11.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image11.png"><img src="assets/images/Image11.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">
                         <span class="font-weight-bold">NOTE :</span> Pour l’instant, le port par défaut utilisé par le GUI est toujours le port HTTPS. Si ce port venait à être changé, toutes les règles concernant l'accès au GUI devront être altérées en conséquence.
                     </p>
                     <br>
                     <h5>4.1.4.2 Réseau interne (LAN) </h5>
-                    <p><a class="popup-img" href="assets/images/image12.png"><img src="assets/images/image12.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image12.png"><img src="assets/images/Image12.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <br>
                     <h5>4.1.4.3 Réseau dédié au site web (DMZ)</h5>
-                    <p><a class="popup-img" href="assets/images/image13.png"><img src="assets/images/image13.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image13.png"><img src="assets/images/Image13.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">
                         <span class="font-weight-bold">NOTE :</span> La destination RFC1918 est un alias regroupant tous les réseaux du RFC1918. Les aliases peuvent être configurés dans `Firewall > Aliases`.<br>
                         <span class="font-weight-bold">NOTE 2 :</span> La configuration actuelle bloque le traffic venant de l'extérieur. Il peut cependant être nécessaire de les activer si le site web nécessite des informations ou services liés à l'extérieur.
@@ -739,9 +739,9 @@
                     <h4>4.1.5 Port-Forwarding (accès au site web depuis le LAN et le WAN)</h4>
                     <p class="text-4">Cette étape doit être réalisée après la mise en place du serveur web. Celui-ci doit déjà être en fonctionnement sur le port 80 de la machine, qui doit pouvoir y accéder par son http://localhost ou http://10.10.0.10. </p>
                     <p class="text-4">Pour rendre accessible le site depuis le LAN ou WAN, il faut que le DNS «intercepte» une requête vers un port spécifique du serveur (ici le port HTTP de l’adresse IP du pfSense, en LAN et en WAN) et la redirige vers une machine qui est normalement inaccessible à ces réseaux (ici le serveur web, dans le DMZ isolé des autres réseaux). </p>
-                    <p><a class="popup-img" href="assets/images/image14.png"><img src="assets/images/image14.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image14.png"><img src="assets/images/Image14.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="text-4">Cette règle se met en place dans `Firewall > NAT > Port Forwarding`: </p>
-                    <p><a class="popup-img" href="assets/images/image15.png"><img src="assets/images/image15.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image15.png"><img src="assets/images/Image15.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="text-4">Désormais, le site doit être accessible sur le port 80 de l’adresse IP du pfSense (WAN) dans le WAN, et l’adresse IP du pfSense (LAN, 10.10.0.1:80) dans le LAN.  </p>
                 </section>
                 <br><br>
@@ -786,8 +786,8 @@
                     <br>
                     <h4>4.2.3 Mise en place des fichiers de restauration</h4>
                     <p class="text-4">Les dossiers suivants et leurs permissions doivent être mis en place en sudo sur la machine: </p>
-                    <p><a class="popup-img" href="assets/images/image16.png"><img src="assets/images/image16.png" class="img-fluid img-thumbnail" alt="image"></a></p>
-                    <p><a class="popup-img" href="assets/images/image17.png"><img src="assets/images/image17.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image16.png"><img src="assets/images/Image16.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image17.png"><img src="assets/images/Image17.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert-info alert">
                         <span class="font-weight-bold">NOTE :</span> Le fichier restore.sh demande en argument le nom de l’archive à utiliser pour la restauration.
                     </p>
@@ -870,7 +870,7 @@ rm -rf /var/www/html/temp /home/web-server/web_backups/temp/* # Removes the temp
                         <span class="font-weight-bold">NOTE :</span> Il convient de se connecter au moins une fois manuellement par SSH au serveur web avant d’exécuter l’un des scripts.
                     </p>
                     <p class="text-4">Les dossiers suivants et leurs permissions doivent être mis en place en sudo: </p>
-                    <p><a class="popup-img" href="assets/images/image18.png"><img src="assets/images/image18.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image18.png"><img src="assets/images/Image18.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <br>
                     <div class="row">
                         <div class="col-lg-12">
@@ -994,7 +994,7 @@ fi
                     <br>
                     <h4>4.3.3 Mise en œuvre des tâches dédiées</h4>
                     <p class="text-4">Il faut modifier le fichier de configuration de crontab (un planificateur de tâches intégré à debian) pour rendre la sauvegarde et la suppression quotidiennes(avec `sudo crontab -e`): </p>
-                    <p><a class="popup-img" href="assets/images/image19.png"><img src="assets/images/image19.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/Image19.png"><img src="assets/images/Image19.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">Ici, les deux scripts se lanceront tous les jours à 18h30.</p>
                 </section>
                 <br><br>
