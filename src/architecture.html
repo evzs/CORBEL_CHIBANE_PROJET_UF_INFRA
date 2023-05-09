@@ -49,7 +49,7 @@
                 <!-- Sidebar Toggler -->
                 <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span class="w-50"></span></button>
                 <!-- Logo -->
-                <a class="logo ml-md-3" href="architecture.html" title="iDocs Template"> <img src="assets/images/logo-light.png" alt="iDocs Template"/> </a>
+                <a class="logo ml-md-3" title="iDocs Template"> <img src="assets/images/logo-light.png" alt="iDocs Template"/> </a>
                 <span class="text-2 ml-2">v1.0</span>
                 <!-- Logo End -->
                 <!-- Navbar Toggler -->
@@ -141,7 +141,7 @@
                             </ul>
                         </div>
                     </div></section>
-                <hr class="divider">
+                <br><br>
                 <!-- Intro
    ============================ -->
 
@@ -153,22 +153,25 @@
                    ============================ -->
                 <section id="idocs_1_1">
                     <h2>1.1 Objet</h2>
-                    <p class="lead">Ce projet a pour but d'évaluer les compétences acquises dans le cadre des modules de l'UF "Infrastructure & Système d'information". En groupe de 2, il fallait realiser un projet visant à mettre en place un SI pour une petite entreprise.
-                        Le projet devait proposer une architecture comprenant un pare-feu avec des fonctionnalités telles que DHCP, DNS, filtrage réseau, routage, ainsi que deux clients (un Windows et un Linux) et deux serveurs Linux (un pour la sauvegarde du site web et un autre pour l'hébergement du site web).</p>
+                    <p class="text-4">Ce projet a pour but d'évaluer les compétences acquises dans le cadre des modules de l'UF "Infrastructure & Système d'information". En groupe de 2, il fallait realiser un projet visant à mettre en place un SI pour une petite entreprise.</p>
+                        
+                    <p class="text-4">Le projet devait proposer une architecture comprenant un pare-feu avec des fonctionnalités telles que DHCP, DNS, filtrage réseau, routage, ainsi que deux clients (un Windows et un Linux) et deux serveurs Linux (un pour la sauvegarde du site web et un autre pour l'hébergement du site web).</p>
                 </section>
-                <hr class="divider">
+                <br><br>
                 <!-- 1.2 Périmètre
                    ============================ -->
                 <section id="idocs_1_2">
                     <h2>1.2 Périmètre</h2>
-                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="text-4">Ce document couvre l'architecture et les fonctionnalités relatives au réseau interne d'une petite entreprise et leurs communications avec le réseau extérieur.</p>
+                    <p class="text-4">Ce réseau interne doit être en mesure de contenir cinq hôtes et permettre leur interopérabilité. Ces cinq hôtes comprennent deux PC clients, un serveur pfSense faisant office de routeur/pare-feu, un serveur web et un serveur de sauvegarde des fichiers du serveur web.
+                    <p class="text-4">Dans un souci de sécurité, il est séparé en deux sous-réseaux: un réseau "tampon" DMZ (zone démilitarisée) n'hébergeant que le site web et recevant les communications extérieures, et un réseau interne LAN où se trouvent toutes les autres machines.</p>
+                    <p class="text-4">Enfin, le site web doit être accessible par tous les membres des réseaux interne (LAN) et externe (WAN).</p>
                 </section>
                 <hr class="divider">
                 <!-- 2. Infrastructure générale
                    ============================ -->
                 <section id="idocs_2">
                     <h1>2. Infrastructure générale</h1>
-                    <p class="lead mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </section>
                 <!-- 2.1 Topologie du réseau
                    ============================ -->
@@ -177,7 +180,7 @@
                     <p><a class="popup-img" href="assets/images/topologie.png"><img src="assets/images/topologie.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">Il est intéressant de noter que dans le cas d’une virtualisation du réseau, les switches ne sont pas « physiquement » présents dans l’infrastructure, puisqu’ils sont internes au logiciel de virtualisation. </p>
                 </section>
-                <hr class="divider">
+                <br><br>
                 <!-- 2.2 Définition succincte des éléments des réseaux
                    ============================ -->
                 <section id="idocs_2_2">
@@ -186,12 +189,14 @@
                     <p class="text-4">Le serveur pfSense sert de colonne vertébrale à l’architecture. Il gère les deux réseaux de l’entreprise (LAN et DMZ) ainsi que leurs relations respectives et avec l’extérieur (Internet).
                         Il a les rôles de routeur, serveur DNS, serveur DHCP, Pare-feu, Proxy inverse et passerelle de sortie pour chacun des deux sous-réseaux qu’il gère.
                     </p>
+                    <br>
                     <h4>2.2.2 Réseau dédié au serveur web (DMZ)</h4>
                     <p class="text-4">Ce réseau n’a pour but que l’hébergement du serveur contenant le site web. Par mesure de sécurité, il n’est pas en mesure de communiquer directement avec le réseau interne, ni capable d’accéder à internet. </p>
+                    <br>
                     <h4>2.2.3 Réseau Interne (LAN)</h4>
                     <p class="text-4">Le LAN constitue le réseau interne de l’entreprise. Il contient les deux PC dits « clients », et le serveur de restauration. Ce serveur a pour but de faire des sauvegardes et d’être en mesure de restaurer les fichiers du site web, situé dans le réseau DMZ.</p>
                 </section>
-                <hr class="divider">
+                <br><br>
                 <!-- 2.3 Tableaux de filtrage des réseaux
                    ============================ -->
                 <section id="idocs_2_3">
@@ -269,6 +274,7 @@
                     Le réseau DMZ ne contenant au maximum que deux machines, son réseau peut théoriquement être réduit à 10.10.0.8/30 (au lieu de 29), réduisant le nombre maximum d’IP attribuables à 2.
                     Cependant, cette configuration n’étant pas supportée de manière universelle (notamment sur le virtualiseur VMWare, pour n’en citer qu’un), un masque de sous-réseau à 29 bits sera préféré ici.
                 </p>
+                <br><br>
                 <!-- 2.4 Services permettant la prise en charge des communications réseaux
                    ============================ -->
                 <section id="idocs_2_4">
@@ -276,6 +282,7 @@
                     <h4>2.4.1 Distribution des addresses IP</h4>
                     <p class="text-4">Le serveur PFSense agissant en qualité de routeur, il est notamment responsable de la liaison adresses IP – MAC (table ARP) de chacun des deux serveurs.</p>
                     <p class="text-4">Si certaines adresses IP doivent être fixes pour conserver la stabilité de l’infrastructure et des bonnes communications, PFSense peut jouer le rôle de serveur DHCP et attribuer dynamiquement les adresses IP restantes (constituant la pool DHCP) à tout nouvel appareil tentant d’accéder au réseau.</p>
+                    <br>
                     <h5>2.4.1.1 Réseau Interne (LAN)</h5>
                     <table class="table table-bordered">
                         <thead>
@@ -298,6 +305,7 @@
                         </tr>
                         </tbody>
                     </table>
+                    <br>
                     <h5>2.4.1.2 Réseau dédié au serveur web (DMZ)</h5>
                     <table class="table table-bordered">
                         <thead>
@@ -323,6 +331,7 @@
                     <p class="alert alert-info"><span class="font-weight-bold">NOTE :</span>
                         Les deux adresses notées par un astérisque (<span class="purple font-weight-bold">*</span>) sont réservées automatiquement dès leur attribution au pare-feu pfSense.
                     </p>
+                    <br>
                     <h4>2.4.2 Serveur DNS</h4>
                     <p class="text-4">Le serveur PFSense joue également le rôle de serveur DNS (Domain Name System), permettant la liaison entre un nom de domaine « compréhensible » et l’adresse IP lui correspondant.
                         Ce serveur DNS permet notamment de réaliser des redirections de port (« Port-Forwarding »), qui seront utilisées pour accéder au serveur web depuis le réseau interne (LAN) de l’entreprise, ou le réseau externe (WAN).
@@ -331,6 +340,7 @@
                 <!-- 2.5 Services permettant de gérer la sécurité des réseaux
                    ============================ -->
                 <p id="idocs_2_5">
+                    <br><br>
                     <h2>2.5 Services permettant de gérer la sécurité des réseaux</h2>
                     <h4>2.5.1 Pare-feu</h4>
                     <p class="text-4">Des règles de pare-feu devront être mises en place par le serveur PFSense pour garantir une base de sécurité suffisante entre les deux sous-réseaux de l’entreprise (LAN et DMZ) et l’extérieur (WAN, donc Internet)  </p>
@@ -684,15 +694,18 @@
                         </tr>
                         </tbody>
                     </table>
+                    <br>
                     <p><a class="popup-img" href="assets/images/1.png"><img src="assets/images/1.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="text-4">Tant que le port par défaut du configurateur web est inchangé, il sera accessible sur le port 443 (HTTPS) de l’IP pfSense correspondant au réseau qui contient la machine.
                     </p>
                         <p class="alert alert-info"> <span class="font-weight-bold">NOTE :</span> Tant que les règles de pare-feu sont inchangées, il peut être nécessaire de réaliser la commande `pfctl -d` dans le shell pour désactiver temporairement le pare-feu. </p>
+                        <br>
                     <h4>4.1.2 Serveur DNS</h4>
                     <p class="text-4">Le serveur DNS s’active dans `Services > DNS Resolver > General Settings`. Par défaut, il sera fonctionnel et actif sur les deux sous-réseaux.</p>
                     <p><a class="popup-img" href="assets/images/2.png"><img src="assets/images/2.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p><a class="popup-img" href="assets/images/3.png"><img src="assets/images/3.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="text-4">Une fois actif, tous les hôtes du sous-réseau auront le DNS principal à l’IP du PFsense située dans leur réseau, identique à la passerelle de sortie (10.10.0.1 dans le LAN et 10.10.0.9 dans le DMZ).</p>
+                    <br>
                     <h4>4.1.3 IP Statiques et serveur DHCP</h4>
                     <h5>4.1.3.1 Serveur interne (LAN)</h5>
                     <p class="text-4">Le serveur DHCP doit être actif sur l’interface LAN dans `Services > DHCP Server > LAN`, avec la range correspondante (voir partie 2.4.1.1).
@@ -704,34 +717,36 @@
                     <p><a class="popup-img" href="assets/images/image7.png"><img src="assets/images/image7.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="text-4">Enfin, il faut ajouter la machine du serveur web aux IP statiques du DHCP pour la lui réserver.</p>
                     <p><a class="popup-img" href="assets/images/image8.png"><img src="assets/images/image8.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <br>
                     <h5>4.1.3.2 Serveur dédié au site web (DMZ)</h5>
                     <p class="text-4">Par défaut, le réseau DMZ n’a pas vocation à distribuer des adresses IP par DHCP. Si toutefois cette option était envisagée, il est possible de reproduire la même configuration que pour le LAN, avec les valeurs du DMZ (DNS/Passerelle à 10.10.0.9 et Range suivante celle décrite dans le tableau de 2.4.1.2). </p>
                     <p class="text-4">L’adresse IP du serveur de backup devant lui être réservée, il faut également l’ajouter aux IP statiques de l’interface DMZ, toujours dans la partie DHCP Server : </p>
                     <p><a class="popup-img" href="assets/images/image9.png"><img src="assets/images/image9.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <br>
                     <h4>4.1.4 Règles de pare-feu</h4>
 <p class="text-4">Les flux entre les trois réseaux doivent se présenter de cette manière : </p>
                     <p><a class="popup-img" href="assets/images/image10.png"><img src="assets/images/image10.png" class="img-fluid img-thumbnail" alt="image"></a></p>
 <p class="text-4">Pour résumer simplement, le LAN doit avoir accès au WAN et au DMZ, tandis que le DMZ ne doit avoir aucun accès aux deux autres réseaux (sécurité supplémentaire en cas d’attaque sur la partie accessible à l’extérieur de l’infrastructure, le serveur web).
 
     Il faut configurer les règles dans `Firewall > Rules`.</p>
-
+<br>
                     <h5>4.1.4.1 Réseau externe (WAN)</h5>
                     <p><a class="popup-img" href="assets/images/image11.png"><img src="assets/images/image11.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">
                         <span class="font-weight-bold">NOTE :</span> Pour l’instant, le port par défaut utilisé par le GUI est toujours le port HTTPS. Comme il est visible sur le diagramme au-dessus, ce port sera changé par la suite.
                     </p>
 
-
+<br>
                     <h5>4.1.4.2 Réseau interne (LAN) </h5>
                     <p><a class="popup-img" href="assets/images/image12.png"><img src="assets/images/image12.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">
                         <span class="font-weight-bold">NOTE :</span> Par défaut, l’anti-lockout rule concerne les ports 443 et 80. Elle ne doit être changée que plus tard, une fois que le port par défaut de l’interface graphique sera modifié.   </p>
-
+                    <br>
                     <h5>4.1.4.3 Réseau dédié au site web (DMZ)</h5>
                     <p><a class="popup-img" href="assets/images/image13.png"><img src="assets/images/image13.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">
                         <span class="font-weight-bold">NOTE :</span> La destination RFC1918 est un alias regroupant tous les réseaux du RFC1918. Les aliases peuvent être configurés dans `Firewall > Aliases`. </p>
-
+                    <br>
                     <h4>4.1.5 Port-Forwarding (accès au site web depuis le LAN et le WAN)</h4>
                     <p class="text-4">Cette étape doit être réalisée après la mise en place du serveur web. Celui-ci doit déjà être en fonctionnement sur le port 80 de la machine, qui doit pouvoir y accéder par son http://localhost ou http://10.10.0.10. </p>
                     <p class="text-4">Pour rendre accessible le site depuis le LAN ou WAN, il faut que le DNS «intercepte» une requête vers un port spécifique du serveur (ici le port HTTP de l’adresse IP du PFsense, en LAN et en WAN) et la redirige vers une machine qui est normalement inaccessible à ces réseaux (ici le serveur web, dans le DMZ isolé des autres réseaux). </p>
@@ -741,7 +756,7 @@
 <p class="text-4">Désormais, le site doit être accessible sur le port 80 de l’adresse IP du PFsense (WAN) dans le WAN, et l’adresse IP du PFsense (LAN, 10.10.0.1:80) dans le LAN.  </p>
 
                 </section>
-                <hr class="divider">
+                <br><br>
                 <!-- 4.2 Configuration des systèmes d'exploitation et des applications sur les clients
                    ============================ -->
                 <section id="idocs_4_2">
@@ -775,10 +790,12 @@
                         </tr>
                         </tbody>
                     </table>
+                    <br>
                     <h4>4.2.2 Mise en place du serveur Web</h4>
                     <p class="text-4">Une fois toutes les dépendances logicielles installées (avec `sudo apt install` + le nom du package), le package Apache2 devrait être disponible sur la machine.</p>
                     <p class="text-4">Pour lancer le serveur au démarrage, il faut réaliser la commande `sudo systemctl enable apache2`.</p>
                     <p class="text-4">Le contenu du dossier `/var/www/html` doit s’afficher sur le port 80 du localhost, et si le PFsense a été entièrement configuré, sur le port 80 des IP LAN et WAN du PFSense.</p>
+                    <br>
                     <h4>4.2.3 Mise en place des fichiers de restauration</h4>
                     <p class="text-4">Les dossiers suivants et leurs permissions doivent être mis en place en sudo sur la machine: </p>
                     <p><a class="popup-img" href="assets/images/image16.png"><img src="assets/images/image16.png" class="img-fluid img-thumbnail" alt="image"></a></p>
@@ -825,7 +842,7 @@ rm -rf /var/www/html/temp /home/web-server/web_backups/temp/* # Removes the temp
                                         </div>
                                     </div>
                 </section>
-                <hr class="divider">
+                <br><br>
                 <!-- 4.3 Configuration des systèmes d'exploitation et des applications serveur, y compris la sauvegarde et l'hébergement de sites web
                    ============================ -->
                 <section id="idocs_4_3">
@@ -859,11 +876,13 @@ rm -rf /var/www/html/temp /home/web-server/web_backups/temp/* # Removes the temp
                         </tr>
                         </tbody>
                     </table>
+                    <br>
                     <h4>4.3.2 Mise en place des fichiers de sauvegarde et de restauration</h4>
                     <p class="alert-info alert">
                         <span class="font-weight-bold">NOTE :</span> Il convient de se connecter au moins une fois manuellement par SSH au serveur web avant d’exécuter l’un des scripts.</p>
                    <p class="text-4">Les dossiers suivants et leurs permissions doivent être mis en place en sudo: </p>
                     <p><a class="popup-img" href="assets/images/image18.png"><img src="assets/images/image18.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <br>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="accordion accordion-alterate arrow-right" id="popularTopics">
@@ -998,12 +1017,13 @@ fi
                             </div>
                         </div>
                     </div>
+                    <br>
                     <h4>4.3.3 Mise en œuvre des tâches dédiées</h4>
                     <p class="text-4">Il faut modifier le fichier de configuration de crontab (un planificateur de tâches intégré à debian) pour rendre la sauvegarde et la suppression quotidiennes(avec `sudo crontab -e`): </p>
                     <p><a class="popup-img" href="assets/images/image19.png"><img src="assets/images/image19.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                <p class="alert alert-info">Ici, les deux scripts se lanceront tous les jours à 18h30.</p>
                 </section>
-                <hr class="divider">
+                <br><br>
                 <section id="idocs_4_4">
                     <h2>4.4 Clients Windows et Linux (LAN)</h2>
 
