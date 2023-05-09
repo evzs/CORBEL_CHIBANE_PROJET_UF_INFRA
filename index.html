@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-    <link href="assets/images/favicon.png" rel="icon" />
+    <link href="assets/images/icon.png" rel="icon" />
     <title>Documentation | Projet UF</title>
     <meta name="description" content="">
     <meta name="author" content="">
@@ -12,10 +12,6 @@
        ============================== -->
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
-    <link
-            rel="stylesheet"
-            href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
-    />
     <!-- Font Awesome Icon -->
     <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css" />
     <!-- Magnific Popup -->
@@ -786,7 +782,7 @@
                     <h4>4.2.2 Mise en place du serveur Web</h4>
                     <p class="text-4">Une fois toutes les dépendances logicielles installées (avec `sudo apt install` + le nom du package), le package Apache2 devrait être disponible sur la machine.</p>
                     <p class="text-4">Pour lancer le serveur au démarrage, il faut réaliser la commande `sudo systemctl enable apache2`.</p>
-                    <p class="text-4">Le contenu du dossier `/var/www/html` doit s’afficher sur le port 80 du localhost, et si le pfSense a été entièrement configuré, sur le port 80 des IP LAN et WAN du pfSense.</p>
+                    <p class="text-4">Le contenu du dossier <code>`/var/www/html`</code> doit s’afficher sur le port 80 du localhost, et si le pfSense a été entièrement configuré, sur le port 80 des IP LAN et WAN du pfSense.</p>
                     <br>
                     <h4>4.2.3 Mise en place des fichiers de restauration</h4>
                     <p class="text-4">Les dossiers suivants et leurs permissions doivent être mis en place en sudo sur la machine: </p>
@@ -1032,7 +1028,6 @@ fi
    ============================ -->
 <script src="assets/vendor/jquery/jquery.min.js"></script>
 <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
 <!-- Highlight JS -->
 <script src="assets/vendor/highlight.js/highlight.min.js"></script>
 <!-- Easing -->
