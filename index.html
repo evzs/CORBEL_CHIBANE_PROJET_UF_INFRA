@@ -688,7 +688,7 @@
                     <p><a class="popup-img" href="assets/images/1.png"><img src="assets/images/1.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="text-4">Tant que le port par défaut du configurateur web est inchangé, il sera accessible sur le port 443 (HTTPS) de l’IP pfSense correspondant au réseau qui contient la machine.
                     </p>
-                    <p class="alert alert-info"> <span class="font-weight-bold">NOTE :</span> Tant que les règles de pare-feu sont inchangées, il peut être nécessaire de réaliser la commande `pfctl -d` dans le shell pour désactiver temporairement le pare-feu. </p>
+                    <p class="alert alert-info"> <span class="font-weight-bold">NOTE :</span> Tant que les règles de pare-feu sont inchangées, il peut être nécessaire de réaliser la commande <code>`pfctl -d`</code> dans le shell pour désactiver temporairement le pare-feu. </p>
                     <br>
                     <h4>4.1.2 Serveur DNS</h4>
                     <p class="text-4">Le serveur DNS s’active dans `Services > DNS Resolver > General Settings`. Par défaut, il sera fonctionnel et actif sur les deux sous-réseaux.</p>
@@ -780,8 +780,8 @@
                     </table>
                     <br>
                     <h4>4.2.2 Mise en place du serveur Web</h4>
-                    <p class="text-4">Une fois toutes les dépendances logicielles installées (avec `sudo apt install` + le nom du package), le package Apache2 devrait être disponible sur la machine.</p>
-                    <p class="text-4">Pour lancer le serveur au démarrage, il faut réaliser la commande `sudo systemctl enable apache2`.</p>
+                    <p class="text-4">Une fois toutes les dépendances logicielles installées (avec <code>`sudo apt install`</code> + le nom du package), le package Apache2 devrait être disponible sur la machine.</p>
+                    <p class="text-4">Pour lancer le serveur au démarrage, il faut réaliser la commande <code>`sudo systemctl enable apache2`</code>.</p>
                     <p class="text-4">Le contenu du dossier <code>`/var/www/html`</code> doit s’afficher sur le port 80 du localhost, et si le pfSense a été entièrement configuré, sur le port 80 des IP LAN et WAN du pfSense.</p>
                     <br>
                     <h4>4.2.3 Mise en place des fichiers de restauration</h4>
@@ -993,7 +993,7 @@ fi
                     </div>
                     <br>
                     <h4>4.3.3 Mise en œuvre des tâches dédiées</h4>
-                    <p class="text-4">Il faut modifier le fichier de configuration de crontab (un planificateur de tâches intégré à debian) pour rendre la sauvegarde et la suppression quotidiennes(avec `sudo crontab -e`): </p>
+                    <p class="text-4">Il faut modifier le fichier de configuration de crontab (un planificateur de tâches intégré à debian) pour rendre la sauvegarde et la suppression quotidiennes(avec <code>`sudo crontab -e`</code>): </p>
                     <p><a class="popup-img" href="assets/images/Image19.png"><img src="assets/images/Image19.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">Ici, les deux scripts se lanceront tous les jours à 18h30.</p>
                 </section>
