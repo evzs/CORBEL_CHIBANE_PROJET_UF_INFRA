@@ -719,7 +719,7 @@
                     <br>
                     <h4>4.1.4 Règles de pare-feu</h4>
                     <p class="text-4">Les flux entre les trois réseaux doivent se présenter de cette manière : </p>
-                    <p><a class="popup-img" href="assets/images/image10.png"><img src="assets/images/image10.png" class="img-fluid img-thumbnail" alt="image"></a></p>
+                    <p><a class="popup-img" href="assets/images/parefeu.png"><img src="assets/images/parefeu.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="text-4">Pour résumer simplement, le LAN doit avoir accès au WAN et au DMZ, tandis que le DMZ ne doit avoir aucun accès aux deux autres réseaux (sécurité supplémentaire en cas d’attaque sur la partie accessible à l’extérieur de l’infrastructure, le serveur web).
                         Il faut configurer les règles dans `Firewall > Rules`.
                     </p>
@@ -727,19 +727,17 @@
                     <h5>4.1.4.1 Réseau externe (WAN)</h5>
                     <p><a class="popup-img" href="assets/images/image11.png"><img src="assets/images/image11.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">
-                        <span class="font-weight-bold">NOTE :</span> Pour l’instant, le port par défaut utilisé par le GUI est toujours le port HTTPS. Comme il est visible sur le diagramme au-dessus, ce port sera changé par la suite.
+                        <span class="font-weight-bold">NOTE :</span> Pour l’instant, le port par défaut utilisé par le GUI est toujours le port HTTPS. Si ce port venait à être changé, toutes les règles concernant l'accès au GUI devront être altérées en conséquence.
                     </p>
                     <br>
                     <h5>4.1.4.2 Réseau interne (LAN) </h5>
                     <p><a class="popup-img" href="assets/images/image12.png"><img src="assets/images/image12.png" class="img-fluid img-thumbnail" alt="image"></a></p>
-                    <p class="alert alert-info">
-                        <span class="font-weight-bold">NOTE :</span> Par défaut, l’anti-lockout rule concerne les ports 443 et 80. Elle ne doit être changée que plus tard, une fois que le port par défaut de l’interface graphique sera modifié.
-                    </p>
                     <br>
                     <h5>4.1.4.3 Réseau dédié au site web (DMZ)</h5>
                     <p><a class="popup-img" href="assets/images/image13.png"><img src="assets/images/image13.png" class="img-fluid img-thumbnail" alt="image"></a></p>
                     <p class="alert alert-info">
-                        <span class="font-weight-bold">NOTE :</span> La destination RFC1918 est un alias regroupant tous les réseaux du RFC1918. Les aliases peuvent être configurés dans `Firewall > Aliases`.
+                        <span class="font-weight-bold">NOTE :</span> La destination RFC1918 est un alias regroupant tous les réseaux du RFC1918. Les aliases peuvent être configurés dans `Firewall > Aliases`.<br>
+                        <span class="font-weight-bold">NOTE 2 :</span> La configuration actuelle bloque le traffic venant de l'extérieur. Il peut cependant être nécessaire de les activer si le site web nécessite des informations ou services liés à l'extérieur.
                     </p>
                     <br>
                     <h4>4.1.5 Port-Forwarding (accès au site web depuis le LAN et le WAN)</h4>
